@@ -1,0 +1,472 @@
+{
+  "actualizado": "2026-11-15",
+  "agencias": [
+    {
+      "slug": "plain-concepts",
+      "nombre": "Plain Concepts",
+      "ciudad": "Córdoba / varias sedes",
+      "ciudad_slug": "",
+      "web": "https://www.plainconcepts.com",
+      "tags": [
+        "Ingeniería de software",
+        "IA aplicada",
+        "Datos",
+        "Cloud"
+      ],
+      "nota": "Se presenta como compañía de ingeniería de software e IA con práctica en analítica de datos, ciberseguridad y cloud. Encaja en proyectos de producto y plataformas de datos de tamaño medio y grande; su foco es construir sistemas, no automatizaciones sueltas de herramienta.",
+      "fuente": "https://www.plainconcepts.com/es/quienes-somos/",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "sngular",
+      "nombre": "Sngular",
+      "ciudad": "España (varias sedes)",
+      "ciudad_slug": "",
+      "web": "https://www.sngular.com",
+      "tags": [
+        "Ingeniería de software",
+        "Datos",
+        "IA",
+        "Equipos dedicados"
+      ],
+      "nota": "Compañía tecnológica cotizada en BME Growth que declara operaciones en Europa, Estados Unidos, LatAm y Oriente Medio. Su modelo es de equipos de producto completos (diseño, desarrollo, datos) más que de servicio puntual de automatización.",
+      "fuente": "https://www.sngular.com",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "keepler",
+      "nombre": "Keepler Data Tech",
+      "ciudad": "Madrid",
+      "ciudad_slug": "madrid",
+      "web": "https://keepler.io",
+      "tags": [
+        "Datos",
+        "Cloud",
+        "IA generativa",
+        "Gran empresa"
+      ],
+      "nota": "Se define como socio especialista en habilitar IA en gran empresa, con trabajo sobre datos y cloud. Perfil de consultoría técnica para compañías con plataforma de datos ya montada o en construcción.",
+      "fuente": "https://keepler.io/contact/",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "bosonit",
+      "nombre": "Bosonit",
+      "ciudad": "Logroño",
+      "ciudad_slug": "",
+      "web": "https://bosonit.com",
+      "tags": [
+        "Consultoría tecnológica",
+        "Datos",
+        "Cloud"
+      ],
+      "nota": "Consultora tecnológica con sede en Logroño según su aviso legal. Su web pública ofrece poco texto explicativo, así que esta ficha se limita a lo comprobable: razón social, sede y área de actividad declarada.",
+      "fuente": "https://bosonit.com/aviso-legal/",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "izertis",
+      "nombre": "Izertis",
+      "ciudad": "Gijón / varias sedes",
+      "ciudad_slug": "",
+      "web": "https://www.izertis.com",
+      "tags": [
+        "Consultoría tecnológica",
+        "Transformación digital",
+        "Datos"
+      ],
+      "nota": "Consultora tecnológica con sede en Gijón y oficinas en varias ciudades según su página de contacto. Cubre transformación digital, datos y desarrollo; útil cuando el proyecto necesita también capa de sistemas y no solo IA.",
+      "fuente": "https://www.izertis.com/es/contacto",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "hiberus",
+      "nombre": "Hiberus",
+      "ciudad": "España (varias sedes)",
+      "ciudad_slug": "",
+      "web": "https://www.hiberus.com",
+      "tags": [
+        "Consultoría tecnológica",
+        "Gran empresa",
+        "Datos",
+        "IA"
+      ],
+      "nota": "Consultora tecnológica que se posiciona en el grupo de cabeza del mercado español por volumen de equipo. Estructura orientada a gran cuenta y a integración con sistemas corporativos existentes.",
+      "fuente": "https://www.hiberus.com",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "minsait",
+      "nombre": "Minsait (Indra)",
+      "ciudad": "España (varias sedes)",
+      "ciudad_slug": "",
+      "web": "https://www.minsait.com/es",
+      "tags": [
+        "Gran empresa",
+        "Sector público",
+        "Transformación digital"
+      ],
+      "nota": "Unidad de transformación digital del grupo Indra. Habitual en licitaciones públicas y proyectos con requisitos de trazabilidad y soberanía del dato, donde el cumplimiento pesa más que la velocidad.",
+      "fuente": "https://www.minsait.com/es",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "babel",
+      "nombre": "Babel",
+      "ciudad": "España (varias sedes)",
+      "ciudad_slug": "",
+      "web": "https://babelgroup.com",
+      "tags": [
+        "Consultoría tecnológica",
+        "Transformación digital"
+      ],
+      "nota": "Multinacional tecnológica española con presencia en varias ciudades, orientada a aceleración y transformación digital. Estructura de consultoría clásica con práctica creciente de IA dentro de proyectos de sistemas.",
+      "fuente": "https://babelgroup.com/contacto/",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "garaje-de-ideas",
+      "nombre": "Garaje de Ideas",
+      "ciudad": "España",
+      "ciudad_slug": "",
+      "web": "https://www.garajedeideas.com",
+      "tags": [
+        "Producto digital",
+        "Diseño",
+        "UX"
+      ],
+      "nota": "Agencia de producto digital (diseño, investigación y desarrollo). No es una consultora de IA pura: entra en proyectos donde la IA es una capa dentro de un producto que hay que diseñar antes de construir.",
+      "fuente": "https://www.garajedeideas.com/",
+      "propio": false,
+      "tipo": "producto",
+      "tipo_label": "Estudio de producto digital"
+    },
+    {
+      "slug": "grow2",
+      "nombre": "Grow2.ai",
+      "ciudad": "España",
+      "ciudad_slug": "",
+      "web": "https://grow2.ai/es",
+      "tags": [
+        "Agentes de IA",
+        "B2B",
+        "CRM"
+      ],
+      "nota": "Se presenta como proveedor de agentes de IA a medida para B2B, con métrica acordada en contrato e integración con CRM. Modelo de proyecto cerrado con compromiso de KPI, poco habitual en el sector.",
+      "fuente": "https://grow2.ai/es",
+      "propio": false,
+      "tipo": "automatizacion",
+      "tipo_label": "Agencia de automatización / IA aplicada"
+    },
+    {
+      "slug": "utilia",
+      "nombre": "Utilia",
+      "ciudad": "Las Palmas",
+      "ciudad_slug": "",
+      "web": "https://www.utilia.ai",
+      "tags": [
+        "Consultoría IA",
+        "Desarrollo a medida",
+        "Software vertical"
+      ],
+      "nota": "Consultoría de IA con sede en Las Palmas según su página de contacto. Combina desarrollo a medida con producto propio para gestión de turnos y gestión integral de empresa.",
+      "fuente": "https://www.utilia.ai/es/contacto",
+      "propio": false,
+      "tipo": "automatizacion",
+      "tipo_label": "Agencia de automatización / IA aplicada"
+    },
+    {
+      "slug": "auttomai",
+      "nombre": "Auttomai",
+      "ciudad": "Madrid",
+      "ciudad_slug": "madrid",
+      "web": "https://auttomai.com",
+      "tags": [
+        "Automatización",
+        "Marketing",
+        "CRM"
+      ],
+      "nota": "Agencia de automatización de marketing y procesos que integra CRM, IA y web. Enfoque de implantación sobre herramientas comerciales ya en uso, no de desarrollo de plataforma propia.",
+      "fuente": "https://auttomai.com/aviso-legal",
+      "propio": false,
+      "tipo": "automatizacion",
+      "tipo_label": "Agencia de automatización / IA aplicada"
+    },
+    {
+      "slug": "roi-hacking",
+      "nombre": "ROI Hacking",
+      "ciudad": "Valencia",
+      "ciudad_slug": "",
+      "web": "https://roihacking.ai",
+      "tags": [
+        "Automatización",
+        "CRM",
+        "Marketing"
+      ],
+      "nota": "Agencia de IA y automatización de procesos con sede en Valencia, centrada en CRM y captación. Publica su propio ranking de agencias donde se coloca primera: un dato a tener en cuenta al leer listas de este sector.",
+      "fuente": "https://roihacking.ai",
+      "propio": false,
+      "tipo": "automatizacion",
+      "tipo_label": "Agencia de automatización / IA aplicada"
+    },
+    {
+      "slug": "pixelclip",
+      "nombre": "Pixelclip",
+      "ciudad": "Madrid",
+      "ciudad_slug": "madrid",
+      "web": "https://www.pixelclip.es",
+      "tags": [
+        "SEO",
+        "SEM",
+        "Visibilidad en IA",
+        "Analítica"
+      ],
+      "nota": "Agencia de search marketing activa desde 2008 según su web, con servicio de visibilidad en asistentes de IA y analítica avanzada. Perfil de captación orgánica y de pago más que de automatización interna.",
+      "fuente": "https://www.pixelclip.es/aviso-legal",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "adsmurai",
+      "nombre": "Adsmurai",
+      "ciudad": "Barcelona",
+      "ciudad_slug": "barcelona",
+      "web": "https://www.adsmurai.com",
+      "tags": [
+        "Publicidad digital",
+        "Automatización de campañas",
+        "Medición"
+      ],
+      "nota": "Agencia y tecnología de publicidad digital con sede en Barcelona. Hoy empuja la gestión de anuncios en asistentes conversacionales y la medición unificada junto al resto de canales de pago.",
+      "fuente": "https://www.adsmurai.com/en/about-us",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "webpositer",
+      "nombre": "Webpositer",
+      "ciudad": "Alicante",
+      "ciudad_slug": "",
+      "web": "https://www.webpositer.com",
+      "tags": [
+        "SEO",
+        "Contenidos",
+        "Crecimiento orgánico"
+      ],
+      "nota": "Agencia de crecimiento orgánico con sede en Alicante según su página de contacto. Trabaja posicionamiento y contenido; la parte de IA llega por el lado de la producción y la automatización de contenidos.",
+      "fuente": "https://www.webpositer.com/contacto/",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "dobuss",
+      "nombre": "Dobuss",
+      "ciudad": "Córdoba / varias sedes",
+      "ciudad_slug": "",
+      "web": "https://www.dobuss.es",
+      "tags": [
+        "Marketing digital",
+        "Captación",
+        "Analítica"
+      ],
+      "nota": "Agencia de marketing digital con sede en Córdoba y presencia en otras ciudades. Perfil de captación y conversión; conviene preguntar explícitamente qué parte del trabajo es IA aplicada y qué parte es gestión de canales.",
+      "fuente": "https://www.dobuss.es/contacto-google-my-business/",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "ideafoster",
+      "nombre": "Ideafoster",
+      "ciudad": "Barcelona",
+      "ciudad_slug": "barcelona",
+      "web": "https://www.ideafoster.com",
+      "tags": [
+        "Innovación",
+        "Producto",
+        "Adopción de IA"
+      ],
+      "nota": "Se describe como agencia de innovación rápida en Barcelona: valida ideas, construye productos y acompaña adopción de IA en Europa y LatAm. Útil para fases de definición y pilotaje antes de un desarrollo grande.",
+      "fuente": "https://www.ideafoster.com",
+      "propio": false,
+      "tipo": "producto",
+      "tipo_label": "Estudio de producto digital"
+    },
+    {
+      "slug": "bismart",
+      "nombre": "Bismart",
+      "ciudad": "Barcelona",
+      "ciudad_slug": "barcelona",
+      "web": "https://bismart.com",
+      "tags": [
+        "Datos",
+        "Business Intelligence",
+        "IA",
+        "Gobierno del dato"
+      ],
+      "nota": "Consultoría de negocio especializada en análisis de datos, integración, gobierno del dato y plataformas. Encaja cuando el problema de IA es en realidad un problema de datos sin resolver.",
+      "fuente": "https://landing.bismart.com/contacto",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "datarmony",
+      "nombre": "Datarmony",
+      "ciudad": "Barcelona",
+      "ciudad_slug": "barcelona",
+      "web": "https://datarmony.com",
+      "tags": [
+        "IA",
+        "Machine learning",
+        "Datos"
+      ],
+      "nota": "Consultora de IA y machine learning con sede en Barcelona. Enfoque de modelos y analítica avanzada; menos orientada a automatización de procesos administrativos.",
+      "fuente": "https://datarmony.com",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "iic",
+      "nombre": "IIC — Instituto de Ingeniería del Conocimiento",
+      "ciudad": "Madrid",
+      "ciudad_slug": "madrid",
+      "web": "https://www.iiconocimiento.com",
+      "tags": [
+        "Investigación aplicada",
+        "IA",
+        "Lenguaje natural"
+      ],
+      "nota": "Centro de investigación aplicada en IA con más de 35 años de actividad según su web, con sede en el campus de la Universidad Autónoma de Madrid. Perfil científico-técnico para proyectos con componente de I+D.",
+      "fuente": "https://www.iiconocimiento.com/contacto/",
+      "propio": false,
+      "tipo": "consultora",
+      "tipo_label": "Consultoría tecnológica"
+    },
+    {
+      "slug": "galadrim",
+      "nombre": "Galadrim",
+      "ciudad": "España",
+      "ciudad_slug": "",
+      "web": "https://galadrim.es",
+      "tags": [
+        "Desarrollo web",
+        "Aplicaciones móviles",
+        "IA aplicada"
+      ],
+      "nota": "Estudio de desarrollo de aplicaciones web y móviles. Entra en proyectos donde la IA se integra en un producto digital existente o nuevo; no es una consultora de estrategia.",
+      "fuente": "https://galadrim.es",
+      "propio": false,
+      "tipo": "producto",
+      "tipo_label": "Estudio de producto digital"
+    },
+    {
+      "slug": "cyberclick",
+      "nombre": "Cyberclick",
+      "ciudad": "Barcelona",
+      "ciudad_slug": "barcelona",
+      "web": "https://www.cyberclick.es",
+      "tags": [
+        "Marketing digital",
+        "Ventas",
+        "IA",
+        "Formación"
+      ],
+      "nota": "Agencia de marketing digital y ventas con más de 25 años de actividad declarada y sedes en Barcelona y Madrid. Combina servicios de captación con formación y contenidos propios sobre IA aplicada.",
+      "fuente": "https://www.cyberclick.es/contacto",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "isocialweb",
+      "nombre": "iSocialWeb",
+      "ciudad": "Cornellà de Llobregat",
+      "ciudad_slug": "barcelona",
+      "web": "https://www.isocialweb.agency",
+      "tags": [
+        "SEO",
+        "GEO",
+        "PPC",
+        "CRO"
+      ],
+      "nota": "Agencia de marketing digital con sede en el área metropolitana de Barcelona, centrada en SEO, GEO (visibilidad en IA), publicidad y conversión. Perfil de captación, con más de una década de actividad declarada.",
+      "fuente": "https://www.isocialweb.agency/aviso-legal/",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "kellenfol",
+      "nombre": "Kellenföl Advertising",
+      "ciudad": "Barcelona",
+      "ciudad_slug": "barcelona",
+      "web": "https://www.kellenfol.com",
+      "tags": [
+        "Publicidad",
+        "Branding",
+        "Media"
+      ],
+      "nota": "Agencia de publicidad y branding con sede en Barcelona, orientada a marca y medios para clientes internacionales y administraciones. La IA aparece como herramienta de producción y medios, no como servicio principal.",
+      "fuente": "https://www.kellenfol.com/contacto-agencia/",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "kubo-creativo",
+      "nombre": "Kubo Creativo",
+      "ciudad": "Valladolid",
+      "ciudad_slug": "",
+      "web": "https://kubocreativo.com",
+      "tags": [
+        "Marketing digital",
+        "Publicidad",
+        "Diseño"
+      ],
+      "nota": "Agencia de publicidad, marketing digital y diseño en Valladolid. Referencia útil para pymes de Castilla y León que quieren proveedor local con apoyo digital, no un equipo de IA especializado.",
+      "fuente": "https://kubocreativo.com",
+      "propio": false,
+      "tipo": "marketing",
+      "tipo_label": "Agencia de marketing y captación"
+    },
+    {
+      "slug": "plataforma-ia",
+      "nombre": "Plataforma IA",
+      "ciudad": "Madrid",
+      "ciudad_slug": "madrid",
+      "web": "https://plataformaia.com",
+      "tags": [
+        "Automatización",
+        "Agentes de IA",
+        "RAG",
+        "Pymes"
+      ],
+      "nota": "Consultoría de automatización con IA para empresas en España, con foco en procesos medibles: agentes, RAG e integraciones. Opera este directorio; queda excluida de la selección editorial por ese motivo y se mantiene en el listado general con esta nota visible.",
+      "fuente": "https://plataformaia.com",
+      "propio": true,
+      "tipo": "automatizacion",
+      "tipo_label": "Agencia de automatización / IA aplicada"
+    }
+  ]
+}
