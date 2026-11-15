@@ -127,6 +127,8 @@ def load():
 def page(path, title, desc, body, jsonld=None, updated=TODAY):
     """Escribe una página con layout común. path sin barra final salvo la home."""
     url = DOMAIN + ("/" if path == "" else "/" + path + "/")
+    noindex = bool(os.environ.get("NOINDEX"))
+    robots_meta = '\n<meta name="robots" content="noindex, follow">' if noindex else ""
     ld = ""
     if jsonld:
         for block in (jsonld if isinstance(jsonld, list) else [jsonld]):
@@ -138,7 +140,7 @@ def page(path, title, desc, body, jsonld=None, updated=TODAY):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{url}">
+<link rel="canonical" href="{url}">{robots_meta}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{BRAND}">
 <meta property="og:title" content="{esc(title)}">
@@ -661,7 +663,11 @@ la fecha actualizada (<a href="/metodologia/">metodología</a>).</p>
         f.write("\n".join(sm))
 
     with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as f:
-        f.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % DOMAIN)
+        if os.environ.get("NOINDEX"):
+            f.write("# Vista previa en GitHub Pages: no indexar hasta que el dominio esté activo.\n"
+                    "User-agent: *\nDisallow: /\n")
+        else:
+            f.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % DOMAIN)
 
     llms = [
         "# %s" % BRAND,
