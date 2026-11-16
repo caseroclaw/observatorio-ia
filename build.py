@@ -7,13 +7,14 @@ JSON-LD, sitemap, robots y llms.txt.
 import json
 import html
 import os
+import re
 import shutil
 from datetime import date
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(BASE, "data", "agencias.json")
 OUT = os.path.join(BASE, "site")
-DOMAIN = "https://plataformaia.eu"
+DOMAIN = "https://observatorio.plataformaia.eu"
 BRAND = "Observatorio IA"
 TODAY = "2026-11-15"
 
@@ -256,6 +257,27 @@ FAQ_HUB = [
      "Sí. Cualquier agencia puede pedir corrección o baja escribiendo al contacto. Las correcciones se publican con "
      "la fecha de revisión actualizada, y las bajas se ejecutan sin pedir nada a cambio."),
 ]
+
+
+def apply_base_path():
+    """Reescribe los enlaces raíz cuando el sitio se publica en un subdirectorio
+    (vista previa en usuario.github.io/repo). En producción BASE_PATH va vacío."""
+    base = os.environ.get("BASE_PATH", "").rstrip("/")
+    if not base:
+        return 0
+    n = 0
+    for dp, _, fs in os.walk(OUT):
+        for f in fs:
+            if not f.endswith(".html"):
+                continue
+            p = os.path.join(dp, f)
+            s = open(p, encoding="utf-8").read()
+            new = re.sub(r'(href|src)="/(?!/)', lambda m: '%s="%s/' % (m.group(1), base), s)
+            if new != s:
+                with open(p, "w", encoding="utf-8") as fh:
+                    fh.write(new)
+                n += 1
+    return n
 
 
 def build():
@@ -702,8 +724,9 @@ la fecha actualizada (<a href="/metodologia/">metodología</a>).</p>
 <p><a class="cta" href="/">Volver al directorio</a></p></div></main></body></html>""" % BRAND)
 
     # ---------- INFORME ----------
+    rewritten = apply_base_path()
     pages = sum(len(files) for _, _, files in os.walk(OUT) if True)
-    print("OK · páginas escritas:", pages)
+    print("OK · páginas escritas:", pages, "| HTML con BASE_PATH:", rewritten)
     print("Fichas:", len(ags), "| ciudades con página:", len([c for c in CITY_META if len([x for x in ags if x['ciudad_slug']==c])>=3]))
     print("URLs en sitemap:", len(urls))
 
