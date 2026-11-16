@@ -1,49 +1,43 @@
 #!/usr/bin/env bash
-# Puesta en marcha del dominio propio. Idempotente: se puede repetir.
-# Requisitos previos (solo el dueño):
-#   1. plataformaia.eu ya no responde 308 al .com
-#   2. DNS de plataformaia.eu apuntando a GitHub Pages (4 A + CNAME www)
+# Puesta en marcha del subdominio del directorio. Idempotente.
 #
-# Uso: ./golive.sh            ejecuta y verifica
-#      ./golive.sh --check    solo comprueba DNS/redirect, no publica
+# Arquitectura elegida: el ápice plataformaia.eu sigue haciendo 308 → plataformaia.com
+# (no se toca nada del .com ni del servidor). El directorio vive en
+# observatorio.plataformaia.eu.
+#
+# Requisito previo (solo el dueño, 1 registro en dondominio):
+#   CNAME  observatorio  →  caseroclaw.github.io
+#
+# Uso: ./golive.sh            publica y verifica
+#      ./golive.sh --check    solo comprueba DNS, no publica
 set -euo pipefail
 cd "$(dirname "$0")"
-DOMAIN="plataformaia.eu"
+DOMAIN="observatorio.plataformaia.eu"
+APEX="plataformaia.eu"
 REPO="caseroclaw/observatorio-ia"
-PAGES_IPS="185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153"
+TARGET="caseroclaw.github.io"
 
-echo "== 1. Redirect del .eu =="
-code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "https://$DOMAIN" || echo "000")
-if [[ "$code" == "301" || "$code" == "308" ]]; then
-  echo "BLOQUEADO: $DOMAIN sigue redirigiendo ($code). Quita la regla en el servidor del .com."; exit 1
+echo "== 1. DNS del subdominio =="
+cname=$(dig +short "$DOMAIN" CNAME | tr -d ' ' | sed 's/\.$//')
+ips=$(dig +short "$DOMAIN" A | tr '\n' ' ')
+echo "CNAME: ${cname:-<ninguno>}  |  A: ${ips:-<ninguno>}"
+if [[ "$cname" != "$TARGET" ]]; then
+  echo "BLOQUEADO: falta el CNAME observatorio → $TARGET en la zona de $APEX."
+  echo "En dondominio: Campo 'observatorio' · Tipo CNAME · Valor '$TARGET'. Luego repite."
+  exit 1
 fi
-echo "ok ($code)"
 
-echo "== 2. DNS =="
-resolved=$(dig +short "$DOMAIN" A | sort | tr '\n' ' ')
-echo "A: $resolved"
-missing=0
-for ip in $PAGES_IPS; do
-  grep -qw "$ip" <<<"$resolved" || { echo "falta A $ip"; missing=1; }
-done
-www=$(dig +short "www.$DOMAIN" CNAME | tr -d ' ')
-echo "www CNAME: ${www:-<ninguno>}"
-[[ -n "$www" ]] || { echo "falta CNAME de www"; missing=1; }
-if [[ $missing -eq 1 ]]; then
-  echo "BLOQUEADO: la zona DNS todavía no apunta a GitHub Pages."; exit 1
-fi
+echo "== 2. El ápice sigue redirigiendo (informativo, no se toca) =="
+echo "https://$APEX → HTTP $(curl -s -o /dev/null -w '%{http_code}' --max-time 15 "https://$APEX" || echo 000)"
 
 if [[ "${1:-}" == "--check" ]]; then echo "Comprobación OK. Nada publicado."; exit 0; fi
 
-echo "== 3. CNAME en el repo y build indexable =="
-printf '%s\n' "$DOMAIN" > site/CNAME 2>/dev/null || true
-NOINDEX= python3 build.py
+echo "== 3. Build indexable (sin noindex, sin BASE_PATH) =="
+python3 build.py
 printf '%s\n' "$DOMAIN" > site/CNAME
-mkdir -p site
-echo "build sin noindex hecho"
 
 echo "== 4. Publicar gh-pages =="
-git add -A && git commit -qm "Go-live: dominio $DOMAIN" || true
+git add -A && git commit -qm "Go-live: $DOMAIN" || true
 git checkout -q --orphan gh-pages-golive
 git rm -rf . -q
 cp -r site/. .
@@ -58,8 +52,7 @@ git checkout -q master
 git branch -qD gh-pages-golive
 
 echo "== 5. Dominio en GitHub Pages + HTTPS =="
-gh api -X PUT "repos/$REPO/pages" -f "cname=$DOMAIN" -F "source[branch]=gh-pages" -F "source[path]=/" >/dev/null || \
-  gh api -X PUT "repos/$REPO/pages" -f "cname=$DOMAIN" >/dev/null
+gh api -X PUT "repos/$REPO/pages" -f "cname=$DOMAIN" >/dev/null
 gh api -X PUT "repos/$REPO/pages" -F "https_enforced=true" >/dev/null || true
 
 echo "== 6. Verificación =="
@@ -69,16 +62,14 @@ for i in 1 2 3 4 5 6; do
   echo "estado pages: $st"
   [[ "$st" == "built" ]] && break
 done
-echo "-- servido en el dominio --"
 for u in "/" "/agencias-ia-madrid/" "/precios-agencias-ia/"; do
   printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "https://$DOMAIN$u")"
   echo "https://$DOMAIN$u"
 done
-echo "-- robots y robots meta --"
-curl -s --max-time 15 "https://$DOMAIN/robots.txt"
-curl -s --max-time 15 "https://$DOMAIN/" | grep -o '<meta name="robots"[^>]*>' || echo "sin meta robots (correcto)"
-echo "-- http -> https --"
-curl -s -o /dev/null -w "%{http_code}\n" --max-time 15 "http://$DOMAIN/"
+echo "-- robots.txt --"; curl -s --max-time 15 "https://$DOMAIN/robots.txt"
+echo "-- meta robots (no debe aparecer) --"
+curl -s --max-time 15 "https://$DOMAIN/" | grep -o '<meta name="robots"[^>]*>' || echo "ok: sin noindex"
+echo "-- http → https --"; curl -s -o /dev/null -w "%{http_code}\n" --max-time 15 "http://$DOMAIN/"
 echo
-echo "Siguiente: Search Console → añadir propiedad de dominio $DOMAIN (TXT DNS) o prefijo URL"
-echo "y enviar https://$DOMAIN/sitemap.xml"
+echo "Siguiente: Search Console → propiedad de dominio '$APEX' (TXT en DNS, cubre subdominios)"
+echo "o prefijo de URL https://$DOMAIN/ , y enviar el sitemap."

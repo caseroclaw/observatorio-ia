@@ -1,7 +1,8 @@
 # Observatorio IA — directorio de agencias de IA en España
 
 Sitio estático (HTML pre-renderizado, sin JS) del directorio de agencias y consultoras de
-inteligencia artificial en España. Dominio previsto: `plataformaia.eu`.
+inteligencia artificial en España. Dominio previsto: `observatorio.plataformaia.eu`
+(el ápice `plataformaia.eu` sigue redirigiendo al `.com`).
 
 ## Estructura
 
@@ -31,6 +32,7 @@ python3 build.py          # regenera site/
 
 ## Publicación
 
-`site/` se publica en GitHub Pages (rama `gh-pages`). Para apuntar el dominio:
-`plataformaia.eu` → registros A de GitHub Pages (185.199.108.153, .109.153, .110.153, .111.153)
-y `www` → CNAME `caseroclaw.github.io`, además de quitar el redirect 308 actual en el servidor.
+`site/` se publica en GitHub Pages (rama `gh-pages`) y se sirve en
+`observatorio.plataformaia.eu`. Para activarlo basta **un registro CNAME** en dondominio:
+`observatorio` → `caseroclaw.github.io`. El ápice `plataformaia.eu` no se toca (sigue redirigiendo
+al `.com`). Detalle completo en `GO-LIVE.md`; la activación se hace con `./golive.sh`.

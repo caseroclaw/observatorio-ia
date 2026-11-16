@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 if [[ "${1:-}" == "--preview" ]]; then
-  NOINDEX=1 python3 build.py
+  NOINDEX=1 BASE_PATH=/observatorio-ia python3 build.py
 else
   python3 build.py
 fi
