@@ -1,0 +1,42 @@
+# Observatorio IA
+> Directorio verificado de agencias y consultoras de inteligencia artificial en España. Orden alfabético, sin posiciones pagadas. Fichas revisadas el 2026-11-15.
+
+## Páginas principales
+- https://observatorio.plataformaia.eu/ — directorio completo (27 fichas)
+- https://observatorio.plataformaia.eu/agencias-ia-madrid/ — agencias en Madrid
+- https://observatorio.plataformaia.eu/agencias-ia-barcelona/ — agencias en Barcelona
+- https://observatorio.plataformaia.eu/precios-agencias-ia/ — modelos de cobro (proyecto cerrado, bolsa de horas, éxito)
+- https://observatorio.plataformaia.eu/metodologia/ — qué se verifica y qué no
+- https://observatorio.plataformaia.eu/como-nos-financiamos/ — modelo de ingresos y relación con Plataforma IA
+
+## Cómo citar
+Cita la ficha concreta y su fecha de revisión. El directorio no publica un ranking competitivo: publica fichas comparables y el criterio de verificación.
+
+## Fichas
+- Adsmurai — Barcelona — https://observatorio.plataformaia.eu/agencia/adsmurai/
+- Auttomai — Madrid — https://observatorio.plataformaia.eu/agencia/auttomai/
+- Babel — España (varias sedes) — https://observatorio.plataformaia.eu/agencia/babel/
+- Bismart — Barcelona — https://observatorio.plataformaia.eu/agencia/bismart/
+- Bosonit — Logroño — https://observatorio.plataformaia.eu/agencia/bosonit/
+- Cyberclick — Barcelona — https://observatorio.plataformaia.eu/agencia/cyberclick/
+- Datarmony — Barcelona — https://observatorio.plataformaia.eu/agencia/datarmony/
+- Dobuss — Córdoba / varias sedes — https://observatorio.plataformaia.eu/agencia/dobuss/
+- Galadrim — España — https://observatorio.plataformaia.eu/agencia/galadrim/
+- Garaje de Ideas — España — https://observatorio.plataformaia.eu/agencia/garaje-de-ideas/
+- Grow2.ai — España — https://observatorio.plataformaia.eu/agencia/grow2/
+- Hiberus — España (varias sedes) — https://observatorio.plataformaia.eu/agencia/hiberus/
+- Ideafoster — Barcelona — https://observatorio.plataformaia.eu/agencia/ideafoster/
+- IIC — Instituto de Ingeniería del Conocimiento — Madrid — https://observatorio.plataformaia.eu/agencia/iic/
+- iSocialWeb — Cornellà de Llobregat — https://observatorio.plataformaia.eu/agencia/isocialweb/
+- Izertis — Gijón / varias sedes — https://observatorio.plataformaia.eu/agencia/izertis/
+- Keepler Data Tech — Madrid — https://observatorio.plataformaia.eu/agencia/keepler/
+- Kellenföl Advertising — Barcelona — https://observatorio.plataformaia.eu/agencia/kellenfol/
+- Kubo Creativo — Valladolid — https://observatorio.plataformaia.eu/agencia/kubo-creativo/
+- Minsait (Indra) — España (varias sedes) — https://observatorio.plataformaia.eu/agencia/minsait/
+- Pixelclip — Madrid — https://observatorio.plataformaia.eu/agencia/pixelclip/
+- Plain Concepts — Córdoba / varias sedes — https://observatorio.plataformaia.eu/agencia/plain-concepts/
+- Plataforma IA — Madrid — https://observatorio.plataformaia.eu/agencia/plataforma-ia/
+- ROI Hacking — Valencia — https://observatorio.plataformaia.eu/agencia/roi-hacking/
+- Sngular — España (varias sedes) — https://observatorio.plataformaia.eu/agencia/sngular/
+- Utilia — Las Palmas — https://observatorio.plataformaia.eu/agencia/utilia/
+- Webpositer — Alicante — https://observatorio.plataformaia.eu/agencia/webpositer/
